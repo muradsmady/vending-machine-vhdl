@@ -1,0 +1,275 @@
+Simulator report for vending
+Fri Dec 20 19:35:27 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 93 nodes     ;
+; Simulation Coverage         ;      69.89 % ;
+; Total Number of Transitions ; 1692         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                       ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Option                                                                                     ; Setting     ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Simulation mode                                                                            ; Functional  ; Timing        ;
+; Start time                                                                                 ; 0 ns        ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF        ;               ;
+; Vector input source                                                                        ; vending.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On          ; On            ;
+; Check outputs                                                                              ; Off         ; Off           ;
+; Report simulation coverage                                                                 ; On          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On          ; On            ;
+; Display missing 1-value coverage report                                                    ; On          ; On            ;
+; Display missing 0-value coverage report                                                    ; On          ; On            ;
+; Detect setup and hold time violations                                                      ; Off         ; Off           ;
+; Detect glitches                                                                            ; Off         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off         ; Off           ;
+; Generate Signal Activity File                                                              ; Off         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto        ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      69.89 % ;
+; Total nodes checked                                 ; 93           ;
+; Total output ports checked                          ; 93           ;
+; Total output ports with complete 1/0-value coverage ; 65           ;
+; Total output ports with no 1/0-value coverage       ; 21           ;
+; Total output ports with no 1-value coverage         ; 28           ;
+; Total output ports with no 0-value coverage         ; 21           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |vending|current_s.put_money  ; |vending|current_s.put_money  ; regout           ;
+; |vending|current_s.in_1       ; |vending|current_s.in_1       ; regout           ;
+; |vending|Soda~0               ; |vending|Soda~0               ; out0             ;
+; |vending|Soda~1               ; |vending|Soda~1               ; out0             ;
+; |vending|next_s.in_1~0        ; |vending|next_s.in_1~0        ; out              ;
+; |vending|next_s.in_5_278      ; |vending|next_s.in_5_278      ; out              ;
+; |vending|next_s.in_6_300      ; |vending|next_s.in_6_300      ; out              ;
+; |vending|next_s.in_3_322      ; |vending|next_s.in_3_322      ; out              ;
+; |vending|next_s.in_3~0        ; |vending|next_s.in_3~0        ; out              ;
+; |vending|next_s.in_3~1        ; |vending|next_s.in_3~1        ; out              ;
+; |vending|next_s.in_1_344      ; |vending|next_s.in_1_344      ; out              ;
+; |vending|CoinOut[1]$latch     ; |vending|CoinOut[1]$latch     ; out              ;
+; |vending|CoinOut[1]~0         ; |vending|CoinOut[1]~0         ; out              ;
+; |vending|CoinOut[1]~1         ; |vending|CoinOut[1]~1         ; out              ;
+; |vending|Soda~2               ; |vending|Soda~2               ; out0             ;
+; |vending|next_s.soda_out_234  ; |vending|next_s.soda_out_234  ; out              ;
+; |vending|CLK                  ; |vending|CLK                  ; out              ;
+; |vending|CoinIn[0]            ; |vending|CoinIn[0]            ; out              ;
+; |vending|CoinIn[1]            ; |vending|CoinIn[1]            ; out              ;
+; |vending|CoinOut[1]           ; |vending|CoinOut[1]           ; pin_out          ;
+; |vending|current_s~0          ; |vending|current_s~0          ; out0             ;
+; |vending|Selector0~0          ; |vending|Selector0~0          ; out0             ;
+; |vending|current_s.in_1~0     ; |vending|current_s.in_1~0     ; out0             ;
+; |vending|Selector0~1          ; |vending|Selector0~1          ; out0             ;
+; |vending|current_s.in_3~0     ; |vending|current_s.in_3~0     ; out0             ;
+; |vending|current_s.in_6~0     ; |vending|current_s.in_6~0     ; out0             ;
+; |vending|current_s.in_5~0     ; |vending|current_s.in_5~0     ; out0             ;
+; |vending|current_s.soda_out~0 ; |vending|current_s.soda_out~0 ; out0             ;
+; |vending|current_s~5          ; |vending|current_s~5          ; out0             ;
+; |vending|Selector0~2          ; |vending|Selector0~2          ; out0             ;
+; |vending|Selector0~3          ; |vending|Selector0~3          ; out0             ;
+; |vending|Selector0~4          ; |vending|Selector0~4          ; out0             ;
+; |vending|Selector1~0          ; |vending|Selector1~0          ; out0             ;
+; |vending|Selector1~1          ; |vending|Selector1~1          ; out0             ;
+; |vending|Selector1~2          ; |vending|Selector1~2          ; out0             ;
+; |vending|Selector3~0          ; |vending|Selector3~0          ; out0             ;
+; |vending|Selector3~1          ; |vending|Selector3~1          ; out0             ;
+; |vending|Selector4~0          ; |vending|Selector4~0          ; out0             ;
+; |vending|Selector4~1          ; |vending|Selector4~1          ; out0             ;
+; |vending|Selector4~2          ; |vending|Selector4~2          ; out0             ;
+; |vending|Selector5~0          ; |vending|Selector5~0          ; out0             ;
+; |vending|Selector6~0          ; |vending|Selector6~0          ; out0             ;
+; |vending|Selector7~0          ; |vending|Selector7~0          ; out0             ;
+; |vending|Selector8~0          ; |vending|Selector8~0          ; out0             ;
+; |vending|Selector8~1          ; |vending|Selector8~1          ; out0             ;
+; |vending|Selector8~2          ; |vending|Selector8~2          ; out0             ;
+; |vending|Selector9~1          ; |vending|Selector9~1          ; out0             ;
+; |vending|Selector10~0         ; |vending|Selector10~0         ; out0             ;
+; |vending|Selector10~1         ; |vending|Selector10~1         ; out0             ;
+; |vending|Selector10~2         ; |vending|Selector10~2         ; out0             ;
+; |vending|Selector12~0         ; |vending|Selector12~0         ; out0             ;
+; |vending|Selector12~1         ; |vending|Selector12~1         ; out0             ;
+; |vending|Selector12~2         ; |vending|Selector12~2         ; out0             ;
+; |vending|Selector13~0         ; |vending|Selector13~0         ; out0             ;
+; |vending|Selector13~1         ; |vending|Selector13~1         ; out0             ;
+; |vending|Selector14~0         ; |vending|Selector14~0         ; out0             ;
+; |vending|Selector14~1         ; |vending|Selector14~1         ; out0             ;
+; |vending|Selector14~2         ; |vending|Selector14~2         ; out0             ;
+; |vending|Selector16~0         ; |vending|Selector16~0         ; out0             ;
+; |vending|Selector16~1         ; |vending|Selector16~1         ; out0             ;
+; |vending|Selector16~2         ; |vending|Selector16~2         ; out0             ;
+; |vending|Equal0~0             ; |vending|Equal0~0             ; out0             ;
+; |vending|Equal1~0             ; |vending|Equal1~0             ; out0             ;
+; |vending|Equal2~0             ; |vending|Equal2~0             ; out0             ;
+; |vending|Equal3~0             ; |vending|Equal3~0             ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |vending|current_s.idle        ; |vending|current_s.idle        ; regout           ;
+; |vending|current_s.in_3        ; |vending|current_s.in_3        ; regout           ;
+; |vending|current_s.in_6        ; |vending|current_s.in_6        ; regout           ;
+; |vending|current_s.in_5        ; |vending|current_s.in_5        ; regout           ;
+; |vending|current_s.change_1    ; |vending|current_s.change_1    ; regout           ;
+; |vending|current_s.soda_out    ; |vending|current_s.soda_out    ; regout           ;
+; |vending|WideOr3               ; |vending|WideOr3               ; out0             ;
+; |vending|next_s~0              ; |vending|next_s~0              ; out0             ;
+; |vending|WideOr5               ; |vending|WideOr5               ; out0             ;
+; |vending|next_s~1              ; |vending|next_s~1              ; out0             ;
+; |vending|next_s.change_1_256   ; |vending|next_s.change_1_256   ; out              ;
+; |vending|next_s.put_money_366  ; |vending|next_s.put_money_366  ; out              ;
+; |vending|CoinOut[0]$latch      ; |vending|CoinOut[0]$latch      ; out              ;
+; |vending|Soda$latch            ; |vending|Soda$latch            ; out              ;
+; |vending|RSTn                  ; |vending|RSTn                  ; out              ;
+; |vending|Soda                  ; |vending|Soda                  ; pin_out          ;
+; |vending|CoinOut[0]            ; |vending|CoinOut[0]            ; pin_out          ;
+; |vending|current_s~1           ; |vending|current_s~1           ; out0             ;
+; |vending|WideOr0~0             ; |vending|WideOr0~0             ; out0             ;
+; |vending|current_s.put_money~0 ; |vending|current_s.put_money~0 ; out0             ;
+; |vending|WideOr0~1             ; |vending|WideOr0~1             ; out0             ;
+; |vending|WideOr0~2             ; |vending|WideOr0~2             ; out0             ;
+; |vending|WideOr0~3             ; |vending|WideOr0~3             ; out0             ;
+; |vending|current_s.change_1~0  ; |vending|current_s.change_1~0  ; out0             ;
+; |vending|WideOr0~4             ; |vending|WideOr0~4             ; out0             ;
+; |vending|WideOr1~0             ; |vending|WideOr1~0             ; out0             ;
+; |vending|current_s~9           ; |vending|current_s~9           ; out0             ;
+; |vending|Selector9~0           ; |vending|Selector9~0           ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |vending|current_s.in_3       ; |vending|current_s.in_3       ; regout           ;
+; |vending|current_s.in_6       ; |vending|current_s.in_6       ; regout           ;
+; |vending|current_s.in_5       ; |vending|current_s.in_5       ; regout           ;
+; |vending|current_s.change_1   ; |vending|current_s.change_1   ; regout           ;
+; |vending|current_s.soda_out   ; |vending|current_s.soda_out   ; regout           ;
+; |vending|WideOr3              ; |vending|WideOr3              ; out0             ;
+; |vending|next_s~1             ; |vending|next_s~1             ; out0             ;
+; |vending|next_s.change_1_256  ; |vending|next_s.change_1_256  ; out              ;
+; |vending|CoinOut[0]$latch     ; |vending|CoinOut[0]$latch     ; out              ;
+; |vending|Soda$latch           ; |vending|Soda$latch           ; out              ;
+; |vending|RSTn                 ; |vending|RSTn                 ; out              ;
+; |vending|Soda                 ; |vending|Soda                 ; pin_out          ;
+; |vending|CoinOut[0]           ; |vending|CoinOut[0]           ; pin_out          ;
+; |vending|current_s~1          ; |vending|current_s~1          ; out0             ;
+; |vending|WideOr0~1            ; |vending|WideOr0~1            ; out0             ;
+; |vending|WideOr0~2            ; |vending|WideOr0~2            ; out0             ;
+; |vending|WideOr0~3            ; |vending|WideOr0~3            ; out0             ;
+; |vending|current_s.change_1~0 ; |vending|current_s.change_1~0 ; out0             ;
+; |vending|WideOr0~4            ; |vending|WideOr0~4            ; out0             ;
+; |vending|WideOr1~0            ; |vending|WideOr1~0            ; out0             ;
+; |vending|current_s~9          ; |vending|current_s~9          ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 20 19:35:27 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off vending -c vending
+Info: Using vector source file "I:/orga projectt/vending.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      69.89 %
+Info: Number of transitions in simulation is 1692
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Fri Dec 20 19:35:27 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
